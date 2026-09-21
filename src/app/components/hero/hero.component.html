@@ -30,7 +30,9 @@
   </div>
   <div class="hero-visual" appReveal>
     <div class="orbit-card">
-      <div class="avatar">NG</div>
+      <div class="avatar">
+        <img src="assets/img/profile.jpg" alt="{{ profile.name }}">
+      </div>
       <ul class="badge-ring">
         @for (badge of orbitBadges; track badge; let i = $index) {
           <li [style.--i]="i">{{ badge }}</li>
