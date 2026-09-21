@@ -3,7 +3,7 @@
   <ol class="timeline">
     @for (item of experienceItems; track item.title + item.org) {
       <li appReveal>
-        <div class="tl-dot" [class.tl-dot-edu]="item.isEducation"></div>
+        <div class="tl-logo" [style.background]="item.logoColor">{{ item.orgShort }}</div>
         <div class="tl-content">
           <span class="tl-date">{{ item.date }}</span>
           <h3>{{ item.title }} &mdash; {{ item.org }}</h3>

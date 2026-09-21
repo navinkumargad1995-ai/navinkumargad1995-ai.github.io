@@ -47,14 +47,18 @@ export const stats: Stat[] = [
   { label: 'Companies', target: 3 },
 ];
 
+export type SkillIcon = 'layers' | 'refresh' | 'form' | 'plug' | 'tool';
+
 export interface SkillGroup {
   title: string;
+  icon: SkillIcon;
   skills: string[];
 }
 
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Angular Core',
+    icon: 'layers',
     skills: [
       'Angular v8–v17+', 'Standalone Components', 'Signals', '@if / @for',
       'Component Architecture', 'Dependency Injection', 'Routing & Lazy Loading', 'Route Guards',
@@ -62,10 +66,12 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'State & Reactive',
+    icon: 'refresh',
     skills: ['RxJS', 'Observables', 'Subjects', 'Operators', 'NgRx Store', 'Actions / Effects', 'Selectors'],
   },
   {
     title: 'Forms & UI',
+    icon: 'form',
     skills: [
       'Reactive Forms', 'Template-driven Forms', 'Custom Validators', 'Custom Directives & Pipes',
       'HTML5 / CSS3', 'Bootstrap', 'Angular Material', 'Responsive UI',
@@ -73,10 +79,12 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Integration & Testing',
+    icon: 'plug',
     skills: ['REST API Integration', 'HttpClient', 'Interceptors', 'JWT Authentication', 'Jasmine', 'Karma', 'Postman', 'Swagger'],
   },
   {
     title: 'Tooling & Process',
+    icon: 'tool',
     skills: ['Git / GitHub', 'CI/CD Pipelines', 'GitHub Actions', 'Chrome DevTools', 'Debugging & Perf. Optimization', 'Agile / Scrum', 'Jira'],
   },
 ];
@@ -85,6 +93,8 @@ export interface ExperienceItem {
   date: string;
   title: string;
   org: string;
+  orgShort: string;
+  logoColor: string;
   description: string;
   isEducation?: boolean;
 }
@@ -94,24 +104,32 @@ export const experienceItems: ExperienceItem[] = [
     date: 'April 2026 – Till Date',
     title: 'Software Engineer',
     org: 'Saince Healthtech Pvt Ltd',
+    orgShort: 'S',
+    logoColor: 'linear-gradient(135deg, #22c55e, #06b6d4)',
     description: 'Building healthcare platform features with modern Angular (Standalone Components, Signals) and contributing to CI/CD-driven delivery.',
   },
   {
     date: 'Jan 2023 – Feb 2026',
     title: 'Software Engineer',
     org: 'Accenture (MSRcosmos Group Pvt Ltd)',
+    orgShort: 'A',
+    logoColor: 'linear-gradient(135deg, #a855f7, #4f46e5)',
     description: 'Delivered enterprise Angular applications across recruitment-tech and IT service-management domains, working within Agile/Scrum teams.',
   },
   {
     date: 'Oct 2021 – Dec 2022',
     title: 'Associate Software Engineer',
     org: 'VisionQuest Solution Pvt Ltd',
+    orgShort: 'V',
+    logoColor: 'linear-gradient(135deg, #f97316, #ef4444)',
     description: 'Started my Angular development career building responsive UI components and integrating REST APIs.',
   },
   {
     date: '2022',
     title: 'BE',
     org: 'VIT',
+    orgShort: 'VIT',
+    logoColor: 'linear-gradient(135deg, #64748b, #334155)',
     description: 'Bachelor of Engineering.',
     isEducation: true,
   },
