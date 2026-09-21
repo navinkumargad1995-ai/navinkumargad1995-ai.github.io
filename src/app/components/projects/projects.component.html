@@ -1,0 +1,24 @@
+<section id="projects" class="section container">
+  <h2 class="section-title" appReveal><span class="tag">04</span>Projects</h2>
+  <div class="projects-grid">
+    @for (project of projects; track project.code) {
+      <article class="project-card" appReveal>
+        <div class="project-head">
+          <h3>{{ project.name }}</h3>
+          <span class="project-code">{{ project.code }}</span>
+        </div>
+        <p>{{ project.description }}</p>
+        <ul class="project-highlights">
+          @for (highlight of project.highlights; track highlight) {
+            <li>{{ highlight }}</li>
+          }
+        </ul>
+        <div class="chips">
+          @for (tech of project.tech; track tech) {
+            <span>{{ tech }}</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

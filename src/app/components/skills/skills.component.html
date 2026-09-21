@@ -1,0 +1,15 @@
+<section id="skills" class="section container">
+  <h2 class="section-title" appReveal><span class="tag">02</span>Skills</h2>
+  <div class="skills-grid">
+    @for (group of skillGroups; track group.title) {
+      <div class="skill-card" appReveal>
+        <h3>{{ group.title }}</h3>
+        <div class="chips">
+          @for (skill of group.skills; track skill) {
+            <span>{{ skill }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

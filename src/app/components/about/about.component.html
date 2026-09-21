@@ -1,0 +1,26 @@
+<section id="about" class="section container">
+  <h2 class="section-title" appReveal><span class="tag">01</span>About Me</h2>
+  <div class="about-grid">
+    <p class="about-text" appReveal>
+      I'm an Angular Developer with 5 years of experience designing and building scalable, high-performance
+      enterprise SPAs using Angular (v8&ndash;v17), TypeScript, and JavaScript (ES6+). I'm hands-on with modern
+      Angular architecture &mdash; Standalone Components, Signals, and the new <code>&#64;if</code>/<code>&#64;for</code>
+      control-flow syntax &mdash; alongside NgRx state management, RxJS, Reactive Forms, lazy-loaded modules,
+      route guards, and HTTP interceptors.
+      <br><br>
+      My background spans recruitment tech, IT service management, and healthcare (HIMS) domains, with a focus
+      on responsive UI (Angular Material/Bootstrap), performance optimization, and clean, maintainable code.
+      I'm comfortable in Agile/Scrum teams &mdash; sprint planning, code reviews, and cross-functional
+      collaboration with backend and QA.
+    </p>
+    <div class="about-info" appReveal>
+      <ul class="info-list">
+        <li><span>Location</span><strong>{{ profile.location }}</strong></li>
+        <li><span>Role</span><strong>{{ profile.role }}</strong></li>
+        <li><span>Education</span><strong>BE, VIT (2022)</strong></li>
+        <li><span>Email</span><strong><a [href]="'mailto:' + profile.email">{{ profile.email }}</a></strong></li>
+        <li><span>Phone</span><strong>{{ profile.phone }}</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>

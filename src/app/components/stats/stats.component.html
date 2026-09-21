@@ -1,0 +1,8 @@
+<section class="stats container" appReveal>
+  @for (stat of stats; track stat.label; let i = $index) {
+    <div class="stat">
+      <span class="stat-num">{{ displayValues()[i] }}</span>
+      <span class="stat-label">{{ stat.label }}</span>
+    </div>
+  }
+</section>
